@@ -1,7 +1,6 @@
-// Espera todo o conteúdo da página carregar antes de rodar o script
+
 document.addEventListener('DOMContentLoaded', function() {
 
-    // --- LÓGICA EXISTENTE PARA O SLIDER ---
     const slider = document.getElementById('velocidade-slider');
     const displayVelocidade = document.getElementById('display-velocidade');
 
@@ -23,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // --- LÓGICA EXISTENTE PARA A PORTINHA ---
     const portinhaToggle = document.getElementById('toggle-portinha');
     const portaDisplay = document.getElementById('display-porta');
 
@@ -38,7 +36,6 @@ document.addEventListener('DOMContentLoaded', function() {
         portinhaToggle.addEventListener('change', atualizarStatusPorta);
     }
 
-    // --- NOVA LÓGICA PARA O MODO MANUAL ---
     const modoManualToggle = document.getElementById('toggle-modo-manual');
     const controlsContainer = document.getElementById('manual-controls-container');
 

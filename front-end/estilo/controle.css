@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
-/* --- CONFIGURAÇÕES GLOBAIS E BODY --- */
 * {
     font-family: "Inter", sans-serif;
     padding: 0;
@@ -13,7 +12,6 @@ body {
     min-height: 100vh;
 }
 
-/* --- LAYOUT PRINCIPAL (Sidebar e Conteúdo) --- */
 .content {
     display: flex;
     flex-direction: row;
@@ -37,7 +35,7 @@ h1 {
     margin-bottom: 1.5rem;
 }
 
-/* --- COMPONENTES GERAIS (Cards) --- */
+
 .card {
     background-color: #F4F1ED;
     border-radius: 8px;
@@ -60,7 +58,6 @@ h1 {
     color: #181818;
 }
 
-/* --- SIDEBAR E NAVEGAÇÃO --- */
 .sidebar {
     background-color: #F5F5F3;
     width: 17%;
@@ -128,7 +125,6 @@ h1 {
     font-weight: 700;
 }
 
-/* --- ESTILOS ESPECÍFICOS DA PÁGINA DE CONTROLE --- */
 
 .info-row {
     display: grid;

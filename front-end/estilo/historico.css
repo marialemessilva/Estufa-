@@ -1,8 +1,4 @@
-/* ================================================================ */
-/* ESTILOS EXCLUSIVOS PARA A PÁGINA DE HISTÓRICO (historico.css) */
-/* ================================================================ */
 
-/* Header com filtros e gráfico */
 .history-header {
     display: flex;
     gap: 2rem;
@@ -44,9 +40,9 @@
     border-color: #2E7D32;
 }
 
-/* Container do Gráfico */
+
 .chart-container {
-    flex-basis: 350px; /* Largura fixa para o card do gráfico */
+    flex-basis: 350px; 
     flex-shrink: 0;
 }
 
@@ -90,14 +86,13 @@
     margin-right: 0.5rem;
 }
 
-/* Container da Tabela */
 .table-container {
-    padding: 0; /* Remove padding do card para a tabela ocupar todo o espaço */
+    padding: 0; 
 }
 
 table {
     width: 100%;
-    border-collapse: collapse; /* Une as bordas das células */
+    border-collapse: collapse; 
 }
 
 th, td {
