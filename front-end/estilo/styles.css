@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* {
+    font-family: "Inter", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    min-height: 100vh;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.main-content {
+    width: 85%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.card {
+    background-color: #F4F1ED;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #525252;
+    margin-bottom: 0.5rem;
+}
+
+.card .sensor-data {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #181818;
+}
+
+.info-row {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.info-row .card {
+    flex-grow: 1;
+}
+
+.welcome-banner {
+    background-color: #B7D7B3;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.welcome-banner h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.welcome-banner p {
+    font-size: 1rem;
+    color: #333;
+}
+
+.sidebar {
+    background-color: #F5F5F3;
+    width: 17%;
+    min-width: 250px;
+    height: 100%;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px solid #EAEAE8;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 2.5rem;
+}
+
+.logo-icon {
+    color: #2E7D32;
+    font-size: 2rem;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2E7D32;
+    margin-left: 0.75rem;
+}
+
+.main-nav ul,
+.sidebar-bottom ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 0.85rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #575756;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.nav-link i {
+    width: 25px;
+    margin-right: 1rem;
+    font-size: 1.1rem;
+}
+
+.nav-link:hover {
+    background-color: #EAEAE8;
+}
+
+.nav-link.active {
+    background-color: #E8E8E5;
+    color: #1C1C1B;
+    font-weight: 700;
+}
+
+.donut-chart-card {
+    flex-basis: 50%;
+}
+
+.temp-card {
+    flex-basis: 25%;
+}
+
+.main-chart-card {
+    width: 100%;     
+    height: 30vh;
+}

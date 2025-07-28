@@ -1,0 +1,118 @@
+/* ================================================================ */
+/* ESTILOS EXCLUSIVOS PARA A PÁGINA DE HISTÓRICO (historico.css) */
+/* ================================================================ */
+
+/* Header com filtros e gráfico */
+.history-header {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.filter-controls {
+    flex-grow: 1;
+}
+
+.filter-controls h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.filter-btn {
+    padding: 0.6rem 1.2rem;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.filter-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.filter-btn.active {
+    background-color: #2E7D32;
+    color: #fff;
+    border-color: #2E7D32;
+}
+
+/* Container do Gráfico */
+.chart-container {
+    flex-basis: 350px; /* Largura fixa para o card do gráfico */
+    flex-shrink: 0;
+}
+
+.chart-container h3 {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.chart-placeholder {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    font-weight: 600;
+}
+
+.chart-legend {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.85rem;
+}
+
+.legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+/* Container da Tabela */
+.table-container {
+    padding: 0; /* Remove padding do card para a tabela ocupar todo o espaço */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Une as bordas das células */
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+thead th {
+    background-color: #fafafa;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+tbody tr:hover {
+    background-color: #f8f8f8;
+}   
