@@ -52,9 +52,9 @@
                     <h3>Resumo Visual</h3>
                     <div class="chart-placeholder">Gráfico Donut</div>
                     <div class="chart-legend">
-                        <div class="legend-item"><span class="legend-color" style="background-color: #5a8d5c;"></span> Irrigações</div>
-                        <div class="legend-item"><span class="legend-color" style="background-color: #f2a666;"></span> Alertas</div>
-                        <div class="legend-item"><span class="legend-color" style="background-color: #7c7c7c;"></span> Ações Manuais</div>
+                        <div class="legend-item"><span class="legend-color" style="background-color: #2E7D32;"></span> Irrigações</div>
+                        <div class="legend-item"><span class="legend-color" style="background-color: #F59E0B;"></span> Alertas</div>
+                        <div class="legend-item"><span class="legend-color" style="background-color: #6B7280;"></span> Ações Manuais</div>
                     </div>
                 </div>
             </div>
@@ -63,38 +63,42 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>Data</th>
+                            <th class="td-icon"></th> <th>Data</th>
                             <th>Hora</th>
                             <th>Evento</th>
                             <th>Detalhes</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr class="evento--irrigacao">
+                            <td class="td-icon"><i class="fa-solid fa-tint"></i></td>
                             <td>07/07/2025</td>
                             <td>14:15</td>
                             <td>Irrigação Automática</td>
                             <td>Sistema irrigou por 2 minutos.</td>
                         </tr>
-                        <tr>
+                        <tr class="evento--manual">
+                            <td class="td-icon"><i class="fa-solid fa-hand-pointer"></i></td>
                             <td>07/07/2025</td>
                             <td>11:30</td>
                             <td>Ação Manual</td>
                             <td>Ventilação ligada pelo usuário.</td>
                         </tr>
-                        <tr>
+                        <tr class="evento--alerta">
+                            <td class="td-icon"><i class="fa-solid fa-triangle-exclamation"></i></td>
                             <td>06/07/2025</td>
                             <td>22:00</td>
                             <td>Alerta de Temperatura</td>
                             <td>Temperatura interna atingiu 10°C. Aquecedor ativado.</td>
                         </tr>
-                        <tr>
+                        <tr class="evento--irrigacao">
+                            <td class="td-icon"><i class="fa-solid fa-tint"></i></td>
                             <td>06/07/2025</td>
                             <td>08:00</td>
                             <td>Irrigação Automática</td>
                             <td>Sistema irrigou por 2 minutos.</td>
                         </tr>
-                        </tbody>
+                    </tbody>
                 </table>
             </div>
         </main>

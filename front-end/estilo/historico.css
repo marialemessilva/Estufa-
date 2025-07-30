@@ -111,3 +111,44 @@ thead th {
 tbody tr:hover {
     background-color: #f8f8f8;
 }   
+
+
+
+/* --- CÓDIGO NOVO PARA MELHORAR A TABELA DE HISTÓRICO --- */
+
+/* Estilo para a coluna nova dos ícones */
+.td-icon {
+  width: 40px;
+  text-align: center;
+  font-size: 1.1rem;
+  padding-right: 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* Deixa a borda da linha da tabela com uma cor específica */
+tbody tr {
+  border-left: 5px solid transparent; /* Borda inicial invisível */
+  transition: all 0.2s ease-in-out;
+}
+
+/* Define as cores da borda e do ícone para cada tipo de evento */
+.evento--irrigacao { 
+  border-left-color: #2E7D32; 
+}
+.evento--irrigacao .td-icon {
+  color: #2E7D32;
+}
+
+.evento--alerta { 
+  border-left-color: #F59E0B; 
+}
+.evento--alerta .td-icon {
+  color: #F59E0B;
+}
+
+.evento--manual { 
+  border-left-color: #6B7280; 
+}
+.evento--manual .td-icon {
+  color: #6B7280;
+}

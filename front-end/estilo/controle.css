@@ -308,9 +308,8 @@ input:checked + .toggle-slider:before {
 }
 
 #manual-controls-container.disabled-controls {
-    opacity: 0.5;
-    pointer-events: none;
-    transition: opacity 0.3s ease-in-out;
+  opacity: 0.5;
+  transition: opacity 0.3s ease-in-out;
 }
 
 
