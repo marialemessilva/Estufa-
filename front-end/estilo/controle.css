@@ -35,7 +35,6 @@ h1 {
     margin-bottom: 1.5rem;
 }
 
-
 .card {
     background-color: #F4F1ED;
     border-radius: 8px;
@@ -125,7 +124,6 @@ h1 {
     font-weight: 700;
 }
 
-
 .info-row {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -193,12 +191,12 @@ h1 {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: #949494;
     border-radius: 34px;
     transition: background-color .4s;
 }
 
-.toggle-slider:before {
+.toggle-slider:before { 
     position: absolute;
     content: "";
     height: 20px;
@@ -215,14 +213,14 @@ h1 {
 }
 
 input:checked + .toggle-slider {
-    background-color: #2E7D32;
+    background-color: #355E3B; /* <-- COR ATUALIZADA */
 }
 
 input:checked + .toggle-slider:before {
-    left: 46px; 
+    left: 30px; /* <-- POSIÇÃO ATUALIZADA */
 }
 .large input:checked + .toggle-slider:before {
-    left: 28px;
+    left: 30px; /* <-- POSIÇÃO ATUALIZADA */
 }
 
 .slider-control {
@@ -289,18 +287,24 @@ input:checked + .toggle-slider:before {
     background-color: #EAEAE8;
 }
 
+.irrigation-button:disabled {
+  background-color: #EAEAE8; 
+  color: #b0b0b0;      
+  cursor: not-allowed; 
+}
+
 .left-controls-wrapper {
-    max-width: 500px;
+    max-width: 400px; /* <-- LARGURA ATUALIZADA */
 }
 
 .vertical-controls-group {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 1.25rem;   
 }
 
 #info-cards-section {
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
 }
 
 #manual-controls-container.disabled-controls {
@@ -309,11 +313,36 @@ input:checked + .toggle-slider:before {
     transition: opacity 0.3s ease-in-out;
 }
 
-.bottom-right-image {
-    position: absolute;
-    bottom: -250px;
-    right: 20px;
-    width: 800px;
-    z-index: -1;
-    opacity: 0.8;
-}   
+
+.image-stack-container {
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+  width: 800px;
+  z-index: -1;  
+  opacity: 0.8; 
+}
+
+
+.plantas-image {    
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+.chuva-image {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  pointer-events: none;
+}
+
+.plantas-image.desativado {
+    filter: grayscale(100%);
+}

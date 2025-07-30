@@ -1,25 +1,25 @@
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {    
+    const modoManualToggle = document.getElementById('toggle-modo-manual');
+    const controlsContainer = document.getElementById('manual-controls-container');
+    const plantasImage = document.querySelector('.plantas-image'); // Pegamos a imagem da planta
 
-    const slider = document.getElementById('velocidade-slider');
-    const displayVelocidade = document.getElementById('display-velocidade');
-
-    function updateSliderFill() {
-        if (!slider) return;
-        const min = slider.min ? slider.min : 0;
-        const max = slider.max ? slider.max : 100;
-        const value = slider.value;
-        const percentage = ((value - min) * 100) / (max - min);
-        slider.style.setProperty('--fill-percentage', `${percentage}%`);
+    function toggleManualControls() {
+    if (modoManualToggle && controlsContainer && plantasImage) {
+    const isManualModeOn = modoManualToggle.checked;
+    if (isManualModeOn) {
+    controlsContainer.classList.remove('disabled-controls');
+    plantasImage.classList.remove('desativado'); // Remove a classe da imagem
+    } else {
+    controlsContainer.classList.add('disabled-controls');
+    plantasImage.classList.add('desativado'); // Adiciona a classe à imagem
+    }
+    }
     }
 
-    if (slider && displayVelocidade) {
-        displayVelocidade.textContent = slider.value;
-        updateSliderFill();
-        slider.addEventListener('input', function() {
-            displayVelocidade.textContent = slider.value;
-            updateSliderFill();
-        });
+    if (modoManualToggle && controlsContainer && plantasImage) {
+    toggleManualControls();
+    modoManualToggle.addEventListener('change', toggleManualControls);
     }
 
     const portinhaToggle = document.getElementById('toggle-portinha');
@@ -35,23 +35,18 @@ document.addEventListener('DOMContentLoaded', function() {
         atualizarStatusPorta();
         portinhaToggle.addEventListener('change', atualizarStatusPorta);
     }
+    const irrigationButton = document.querySelector('.irrigation-button');
+    const rainImage = document.querySelector('.chuva-image');
 
-    const modoManualToggle = document.getElementById('toggle-modo-manual');
-    const controlsContainer = document.getElementById('manual-controls-container');
+    if (irrigationButton && rainImage) {
+    irrigationButton.addEventListener('click', () => {
+        irrigationButton.disabled = true;
+        rainImage.style.opacity = '1';
+        setTimeout(() => {
+        rainImage.style.opacity = '0';
+        irrigationButton.disabled = false;
+        }, 3200);
 
-    function toggleManualControls() {
-        if (modoManualToggle && controlsContainer) {
-            const isManualModeOn = modoManualToggle.checked;
-            if (isManualModeOn) {
-                controlsContainer.classList.remove('disabled-controls');
-            } else {
-                controlsContainer.classList.add('disabled-controls');
-            }
-        }
-    }
-
-    if (modoManualToggle && controlsContainer) {
-        toggleManualControls();
-        modoManualToggle.addEventListener('change', toggleManualControls);
+    });
     }
 });
