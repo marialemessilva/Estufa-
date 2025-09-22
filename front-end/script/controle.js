@@ -95,4 +95,24 @@ document.addEventListener('DOMContentLoaded', function() {
         handleVentilacaoState(); // Roda uma vez para definir o estado inicial
         ventilacaoToggle.addEventListener('change', handleVentilacaoState);
     }
+
+    // --- NOVO: LÓGICA PARA O TOGGLE QUENTE/FRIO ---
+
+    const climaToggle = document.getElementById('toggle-clima');
+    const climaDisplay = document.getElementById('display-clima');
+
+    function updateClimaStatus() {
+        if (climaToggle.checked) {
+            climaDisplay.textContent = 'Quente'; 
+        } else {
+            climaDisplay.textContent = 'Frio'; 
+        }
+    }
+
+    if (climaToggle && climaDisplay) {
+        updateClimaStatus(); // Roda a função uma vez para definir o texto inicial
+        climaToggle.addEventListener('change', updateClimaStatus);
+    }
+
+
 });
