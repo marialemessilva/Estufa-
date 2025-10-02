@@ -109,8 +109,49 @@
         </main>
     </div>
 
-    <div id="help-modal" class="modal-overlay"></div>
-    <div id="config-modal" class="modal-overlay"></div>
+    <div id="help-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h2>Ajuda e Informações</h2>
+            
+            <!-- <hr> <h4>Como Usar os Filtros de Período</h4> -->
+            <p>Para facilitar a sua análise, a tela de Histórico permite que você filtre os eventos</p>
+            <ul>
+                <li><strong><br>Todos </strong>- este é o modo padrão.</li>
+                <li><strong>Hoje </strong> -  mostra um resumo do dia atual.</li>
+                <li><strong>Semana </strong>- exibe os registros dos últimos 7 dias.</li>
+                <li><strong>Mês </strong>- apresenta todos os eventos que aconteceram.</li>
+            </ul>
+            <p><strong><br>Dica</strong> <br>Experimente clicar nos diferentes filtros.</p>
+        </div>
+    </div>
+
+
+    <div id="config-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h2>Configurações da Estufa</h2>
+            <form class="config-form">
+                <div class="form-group">
+                    <label for="temp-max">Temperatura Máxima Ideal (°C)</label>
+                    <input type="number" id="temp-max" value="28" min="20" max="50">
+                </div>
+                <div class="form-group">
+                    <label for="temp-min">Temperatura Mínima Ideal (°C)</label>
+                    <input type="number" id="temp-min" value="18" min="-10" max="20">
+                </div>
+                <div class="form-group">
+                    <label for="umid-max">Umidade Máxima Ideal (%)</label>
+                    <input type="number" id="umid-max" value="85" min="50" max="100">
+                </div>
+                <div class="form-group">
+                    <label for="umid-min">Umidade Mínima Ideal (%)</label>
+                    <input type="number" id="umid-min" value="60" min="30" max="70">
+                </div>
+                <button type="submit" class="btn-salvar">Salvar Alterações</button>
+            </form>
+        </div>
+    </div>
 
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
